@@ -3,5 +3,6 @@ import hidden_4
 
 if __name__ == "__main__":
     names = dir(hidden_4)
-    for name in sorted([name for name in names if not name.startswith("__")]):
+     filtered = sorted([n for n in names if not n.startswith("__")])
+    for name in filtered:
         print(name)
