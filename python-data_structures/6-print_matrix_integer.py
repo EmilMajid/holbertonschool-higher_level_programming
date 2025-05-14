@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         for i in range(len(row)):
@@ -6,4 +7,3 @@ def print_matrix_integer(matrix=[[]]):
             else:
                 print("{:d}".format(row[i]), end="")
         print()
-        
