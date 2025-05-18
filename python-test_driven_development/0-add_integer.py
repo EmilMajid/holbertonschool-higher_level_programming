@@ -7,6 +7,7 @@ The example module supplies one function, add_integer().  For example,
 """
 
 def add_integer(a, b=98):
+
     """Return the sum of two numbers.
     >>> add_integer(1, 2)
     3
