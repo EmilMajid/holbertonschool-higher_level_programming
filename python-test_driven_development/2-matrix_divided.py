@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
     max_len = max(len(item) for item in matrix)
     for sublist in matrix:
         if len(sublist) != max_len:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError("Each row of the matrix must have the same size")
         new_matrix.append(sublist[:])
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
