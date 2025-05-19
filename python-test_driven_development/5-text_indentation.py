@@ -7,7 +7,8 @@ The example module supplies one function, def text_indentation().
 
 def text_indentation(text):
     '''
-    function that prints a text with 2 new lines after these characters: ., ? and :
+    function that prints a text with 2 new lines after these 
+    characters: ., ? and :
     '''
     if not isinstance(text, str):
         raise TypeError("text must be a string")
