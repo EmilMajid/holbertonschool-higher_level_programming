@@ -1,7 +1,7 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
->>> text = "Holberton School"
->>> text_indentation(text)
-Holberton School
+>>> text_indentation("some text.")
+some text.
+<BLANKLINE>
 >>> try:
 ...     text_indentation(123)
 ... except Exception as e:
