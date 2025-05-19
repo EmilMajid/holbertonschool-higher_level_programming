@@ -25,13 +25,3 @@ def matrix_divided(matrix, div):
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             new_matrix[i][j] = round(new_matrix[i][j] / div, 2)
     return new_matrix
-
-
-matrix = [
-    [2, 3],
-    [4, 5, 6]
-]
-try:
-    print(matrix_divided(matrix, 2))
-except Exception as e:
-    print(e)
