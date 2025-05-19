@@ -8,15 +8,17 @@ def matrix_divided(matrix, div):
     '''
     Returns new list of lists diveded by div argument
     '''
-
+    new_matrix = []
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     try:
-        new_matrix = matrix.copy()
+        for sublist in matrix:
+            new_matrix.append(sublist[:])
         for i in range(len(matrix)):
             for j in range(len(matrix[i])):
                 new_matrix[i][j] /= div
     except TypeError:
         print("matrix must be a matrix (list of lists) of integers/floats")
-    except ZeroDivissionError:
+    except ZeroDivisionError:
         print("division by zero")
+    return new_matrix
