@@ -9,6 +9,7 @@ def matrix_divided(matrix, div):
     '''
     Returns new list of lists diveded by div argument
     '''
+    error = "matrix must be a matrix (list of lists) of integers/floats"
     new_matrix = []
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
@@ -22,7 +23,6 @@ def matrix_divided(matrix, div):
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             if not isinstance(new_matrix[i][j], (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of \
-                integers/floats")
+                raise TypeError(error)
             new_matrix[i][j] = round(new_matrix[i][j] / div, 2)
     return new_matrix
