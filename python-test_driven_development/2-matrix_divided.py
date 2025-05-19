@@ -15,9 +15,9 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     max_len = max(len(item) for item in matrix)
     for sublist in matrix:
-        new_matrix.append(sublist[:])
-        if len(matrix[sublist]) != max_len:
+        if len(sublist) != max_len:
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        new_matrix.append(sublist[:])
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             new_matrix[i][j] = round(new_matrix[i][j] / div, 2)
