@@ -4,6 +4,7 @@ This is the "2-matrix_divided" module.
 The example module supplies one function, def matrix_divided().
 '''
 
+
 def matrix_divided(matrix, div):
     '''
     Returns new list of lists diveded by div argument
@@ -21,6 +22,16 @@ def matrix_divided(matrix, div):
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             if not isinstance(new_matrix[i][j], (int, float)):
-                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             new_matrix[i][j] = round(new_matrix[i][j] / div, 2)
     return new_matrix
+
+
+matrix = [
+    [2, 3],
+    [4, 5, 6]
+]
+try:
+    print(matrix_divided(matrix, 2))
+except Exception as e:
+    print(e)
