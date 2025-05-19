@@ -21,4 +21,4 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_values(self):
         self.assertRaises(TypeError, max_integer('a'), 'argument must be a list')
-        self.assertRaises(TypeError, max_integer(['a', 1, 2, 3]), ''>' not supported between instances of 'int' and 'str'')
+        self.assertRaises(TypeError, max_integer(['a', 1, 2, 3]), '\'>\' not supported between instances of \'int\' and \'str\'')
