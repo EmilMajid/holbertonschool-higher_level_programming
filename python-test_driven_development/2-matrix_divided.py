@@ -20,4 +20,3 @@ def matrix_divided(matrix, div):
         print("matrix must be a matrix (list of lists) of integers/floats")
     except ZeroDivissionError:
         print("division by zero")
-    return new_matrix, matrix
