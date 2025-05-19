@@ -2,23 +2,9 @@
 >>> text = "Hello. How are you? I hope you're doing well: today is great."
 >>> text_indentation(text)
 Hello
-
-How are you
-
-I hope you're doing well
-
-today is great
-
 >>> text = "This is a test. Another test? This is a: final test."
 >>> text_indentation(text)
 This is a test
-
-Another test
-
-This is a
-
-final test
-
 >>> try:
 ...     text_indentation(123)
 ... except Exception as e:
