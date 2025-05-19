@@ -17,11 +17,10 @@ def matrix_divided(matrix, div):
     for sublist in matrix:
         if len(sublist) != max_len:
             raise TypeError("Each row of the matrix must have the same size")
-            for element in sublist:
-                if not isinstance(element, (int, float)):
-                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         new_matrix.append(sublist[:])
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
+            if not isinstance(new_matrix[i][j], (int, float)):
+                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             new_matrix[i][j] = round(new_matrix[i][j] / div, 2)
     return new_matrix
