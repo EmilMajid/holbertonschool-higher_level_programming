@@ -6,19 +6,11 @@ The example module supplies one function, def text_indentation().
 
 
 def text_indentation(text):
-    """Prints text with 2 new lines after '.', '?', and ':'"""
+    '''
+    function that prints a text with 2 new lines after each of these characters: ., ? and :
+    '''
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-
-    special_chars = ['.', '?', ':']
-    line = ""
-
-    for char in text:
-        line += char
-        if char in special_chars:
-            print(line.strip())
-            print()
-            line = ""
-
-    if line.strip():
+    text = text.replace('.', '.\n\n').replace('?', '?\n\n').replace(':', ':\n\n')
+    for line in text.strip().splitlines():
         print(line.strip())
