@@ -13,12 +13,12 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if (div == 0):
         raise ZeroDivisionError("division by zero")
-    try:
-        for sublist in matrix:
-            new_matrix.append(sublist[:])
-        for i in range(len(matrix)):
-            for j in range(len(matrix[i])):
-                new_matrix[i][j] = round(new_matrix[i][j] / div, 2)
-    except TypeError:
-        print("matrix must be a matrix (list of lists) of integers/floats")
+    max_len = max(len(item) for item in matrix)
+    for sublist in matrix:
+        new_matrix.append(sublist[:])
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if len(matrix[i]) != max_len and not isinstance(matrix[i][j], (int, float)):
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            new_matrix[i][j] = round(new_matrix[i][j] / div, 2)
     return new_matrix
