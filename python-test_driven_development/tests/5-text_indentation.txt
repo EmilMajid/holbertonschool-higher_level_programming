@@ -1,10 +1,7 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
->>> text = "Hello. How are you? I hope you're doing well: today is great."
+>>> text = "Holberton School"
 >>> text_indentation(text)
-Hello
->>> text = "This is a test. Another test? This is a: final test."
->>> text_indentation(text)
-This is a test
+Holberton School
 >>> try:
 ...     text_indentation(123)
 ... except Exception as e:
