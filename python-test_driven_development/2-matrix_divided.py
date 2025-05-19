@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
             new_matrix.append(sublist[:])
         for i in range(len(matrix)):
             for j in range(len(matrix[i])):
-                new_matrix[i][j] /= div
+                new_matrix[i][j] = round(new_matrix[i][j] / div, 2)
     except TypeError:
         print("matrix must be a matrix (list of lists) of integers/floats")
     except ZeroDivisionError:
