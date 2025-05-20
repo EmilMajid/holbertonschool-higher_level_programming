@@ -9,6 +9,8 @@ class Square:
     square class has private attr size returns the current square area
     '''
     def __init__(self, size=0, position=(0, 0)):
+        if not isinstance(position, tuple) or len(position) != 2 or position[0] > 0 or position[1] > 0:
+            raise TypeError('position must be a tuple of 2 positive integers')
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
         if size < 0:
@@ -69,6 +71,6 @@ class Square:
         '''
         this is setter for position
         '''
-        if not isinstance(value, tuple) and len(value) != 2:
+        if not isinstance(value, tuple) or len(value) != 2 or value[0] > 0 or value[1] > 0:
             raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = value
