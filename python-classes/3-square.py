@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-this module 3-square right now it is empty
+This module defines the Square class (3-square.py).
 '''
 
 
@@ -16,6 +16,9 @@ class Square:
         self.__size = size
     def area(self):
         '''
-        Return the area of the square.
+        Calculate and return the area of the square.
+
+        Returns:
+            int: The area of the square.
         '''
         return self.__size ** 2
