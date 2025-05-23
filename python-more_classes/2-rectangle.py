@@ -12,7 +12,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """
-        Initializes the Rectangle instance.       
+        Initializes the Rectangle instance.
         Args:
             width (int): Width of the rectangle.
             height (int): Height of the rectangle.
@@ -70,8 +70,8 @@ class Rectangle:
         """
         Calculates the perimeter of the rectangle.
         Returns:
-        int: Perimeter of the rectangle or 0 
-        if either width or height is 0.
+            int: Perimeter of the rectangle or 0
+            if either width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return 0
