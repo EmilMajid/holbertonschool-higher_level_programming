@@ -78,7 +78,7 @@ class Rectangle:
         Calculate and return the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter (2 * (width + height)), or 0 
+            int: The perimeter (2 * (width + height)), or 0
             if width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
@@ -90,7 +90,7 @@ class Rectangle:
         Return a string representation of the rectangle using '#' characters.
 
         Returns:
-            str: The rectangle drawn with '#' or 
+            str: The rectangle drawn with '#' or
             an empty string if width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
@@ -102,7 +102,7 @@ class Rectangle:
         Return a string representation of the rectangle suitable for eval().
 
         Returns:
-            str: A string that can recreate the instance, 
+            str: A string that can recreate the instance,
             e.g. 'Rectangle(2, 4)'.
         """
         return f"Rectangle({self.__width}, {self.__height})"
