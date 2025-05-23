@@ -4,10 +4,9 @@ This module defines the Rectangle class with width and height.
 It includes methods to compute area, perimeter, and string representations.
 """
 
+
 class Rectangle:
     """Defines a rectangle with width and height."""
-
-
     def __init__(self, width=0, height=0):
         """
         Initialize a new Rectangle instance.
@@ -79,7 +78,8 @@ class Rectangle:
         Calculate and return the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter (2 * (width + height)), or 0 if width or height is 0.
+            int: The perimeter (2 * (width + height)), or 0 
+            if width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return 0
@@ -90,7 +90,8 @@ class Rectangle:
         Return a string representation of the rectangle using '#' characters.
 
         Returns:
-            str: The rectangle drawn with '#' or an empty string if width or height is 0.
+            str: The rectangle drawn with '#' or 
+            an empty string if width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
@@ -101,7 +102,7 @@ class Rectangle:
         Return a string representation of the rectangle suitable for eval().
 
         Returns:
-            str: A string that can recreate the instance, e.g. 'Rectangle(2, 4)'.
+            str: A string that can recreate the instance, 
+            e.g. 'Rectangle(2, 4)'.
         """
         return f"Rectangle({self.__width}, {self.__height})"
-
