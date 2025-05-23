@@ -5,6 +5,7 @@ including methods for area, perimeter, string representation,
 and class/staticmethods as specified.
 """
 
+
 class Rectangle:
     """Defines a rectangle."""
 
@@ -56,7 +57,8 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        """Return the string representation of the rectangle with print_symbol."""
+        """Return the string representation of
+        the rectangle with print_symbol."""
         if self.width == 0 or self.height == 0:
             return ""
         lines = []
@@ -69,7 +71,8 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Print a message when an instance is deleted and decrement the instance counter."""
+        """Print a message when an instance is
+        deleted and decrement the instance counter."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
