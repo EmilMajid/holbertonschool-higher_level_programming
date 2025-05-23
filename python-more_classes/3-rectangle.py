@@ -2,7 +2,7 @@
 """
 This module defines a Rectangle class that allows
 area and perimeter calculations, with proper encapsulation,
-validation, and custom string representations.
+validation, and string representation using '#'.
 """
 
 
@@ -10,7 +10,7 @@ class Rectangle:
     """
     A class that defines a rectangle by its width and height,
     and provides methods to compute area and perimeter.
-    It also supports visual representation using the `#` character.
+    Also supports visual representation using the '#' character.
     """
 
     def __init__(self, width=0, height=0):
@@ -26,25 +26,20 @@ class Rectangle:
 
     @property
     def width(self):
-        """
-        Getter for the width of the rectangle.
-
-        Returns:
-            int: The width of the rectangle.
-        """
+        """Getter for the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
         """
-        Setter for the width of the rectangle with validation.
+        Setter for the width with validation.
 
         Args:
-            value (int): The width value to set.
+            value (int): New width value.
 
         Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is less than 0.
+            TypeError: If value is not an integer.
+            ValueError: If value is negative.
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -54,25 +49,20 @@ class Rectangle:
 
     @property
     def height(self):
-        """
-        Getter for the height of the rectangle.
-
-        Returns:
-            int: The height of the rectangle.
-        """
+        """Getter for the height of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
         """
-        Setter for the height of the rectangle with validation.
+        Setter for the height with validation.
 
         Args:
-            value (int): The height value to set.
+            value (int): New height value.
 
         Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is less than 0.
+            TypeError: If value is not an integer.
+            ValueError: If value is negative.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -82,20 +72,20 @@ class Rectangle:
 
     def area(self):
         """
-        Calculates the area of the rectangle.
+        Computes the area of the rectangle.
 
         Returns:
-            int: The area (width × height).
+            int: The area (width * height).
         """
         return self.__width * self.__height
 
     def perimeter(self):
         """
-        Calculates the perimeter of the rectangle.
+        Computes the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter (2 × (width + height)), or 0 if
-                 either width or height is 0.
+            int: The perimeter (2 * (width + height)), or 0 if
+            width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return 0
@@ -103,21 +93,12 @@ class Rectangle:
 
     def __str__(self):
         """
-        Returns a string representation of the rectangle using `#`.
+        Returns the string representation of the rectangle using `#`.
 
         Returns:
-            str: The rectangle printed with `#`, or an empty string
-                 if width or height is 0.
+            str: Visual rectangle using '#' characters, or an empty
+            string if width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join(["#" * self.__width for _ in range(self.__height)])
-
-    def __repr__(self):
-        """
-        Returns a string that can recreate the object.
-
-        Returns:
-            str: A string in the format Rectangle(width, height).
-        """
-        return f"Rectangle({self.__width}, {self.__height})"
