@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This module defines the Rectangle class for modeling a rectangle."""
 
 class Rectangle:
     """Defines a rectangle with width and height.
@@ -138,4 +139,3 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
-
