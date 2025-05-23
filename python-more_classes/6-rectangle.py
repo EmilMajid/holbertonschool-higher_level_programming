@@ -6,6 +6,7 @@ It includes width and height validation, calculates area and perimeter,
 tracks number of instances, and provides string representations.
 """
 
+
 class Rectangle:
     """
     Represents a rectangle.
@@ -77,4 +78,3 @@ class Rectangle:
         """Print a message and decrease the instance count on deletion."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
