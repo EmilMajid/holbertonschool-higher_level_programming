@@ -4,6 +4,7 @@ This module defines a Rectangle class that allows
 area and perimeter calculations with proper encapsulation and validation.
 """
 
+
 class Rectangle:
     """
     A class that defines a rectangle by its width and height.
@@ -11,8 +12,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """
-        Initializes the Rectangle instance.
-        
+        Initializes the Rectangle instance.       
         Args:
             width (int): Width of the rectangle.
             height (int): Height of the rectangle.
@@ -29,7 +29,6 @@ class Rectangle:
     def width(self, value):
         """
         Sets the width of the rectangle with validation.
-        
         Raises:
             TypeError: If width is not an integer.
             ValueError: If width is less than 0.
@@ -49,7 +48,6 @@ class Rectangle:
     def height(self, value):
         """
         Sets the height of the rectangle with validation.
-        
         Raises:
             TypeError: If height is not an integer.
             ValueError: If height is less than 0.
@@ -63,7 +61,6 @@ class Rectangle:
     def area(self):
         """
         Calculates the area of the rectangle.
-        
         Returns:
             int: Area of the rectangle.
         """
@@ -72,9 +69,9 @@ class Rectangle:
     def perimeter(self):
         """
         Calculates the perimeter of the rectangle.
-        
         Returns:
-            int: Perimeter of the rectangle or 0 if either width or height is 0.
+        int: Perimeter of the rectangle or 0 
+        if either width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return 0
