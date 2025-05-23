@@ -9,6 +9,7 @@ It supports:
 - Customizable string representation using any symbol
 """
 
+
 class Rectangle:
     """Defines a rectangle with width and height, and tracks instances."""
 
@@ -135,4 +136,3 @@ class Rectangle:
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
