@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines the Rectangle class for modeling a rectangle."""
 
+
 class Rectangle:
     """Defines a rectangle with width and height.
 
@@ -102,7 +103,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        k=[str(self.print_symbol) * self.__width for _ in range(self.__height)]
+    k = [str(self.print_symbol) * self.__width for _ in range(self.__height)]
         return "\n".join(k)
 
     def __repr__(self):
