@@ -13,5 +13,4 @@ def to_json_string(my_obj):
     Note:
         Will raise TypeError if the object contains non-serializable types
     """
-
     return json.dumps(my_obj)
