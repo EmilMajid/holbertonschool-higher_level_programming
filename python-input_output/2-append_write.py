@@ -10,7 +10,8 @@ def append_write(filename="", text=""):
     """Appends text to a file and returns the number of characters added.
 
     This function safely appends the specified text to the given file using
-    UTF-8 encoding. If the file doesn't exist, it will be created automatically.
+    UTF-8 encoding. If the file doesn't exist,
+    it will be created automatically.
     The operation is performed using Python's context manager for reliable
     file handling.
     Args:
@@ -32,4 +33,3 @@ def append_write(filename="", text=""):
 
     with open(filename, 'a', encoding='utf-8') as f:
         return f.write(text)
-        
