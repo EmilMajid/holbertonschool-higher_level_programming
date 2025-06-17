@@ -26,8 +26,7 @@ class Student:
         Returns:
             dict: A dictionary containing the requested student attributes
         """
-        for attr in attrs:
-            if isinstance(attrs, list) and all(isinstance(attr, str())):
-                if key in attrs:
-                    return {key: value for key, value in self.__dict__.items()}
-        return self.__dict__
+        if attrs is not None:
+            return {k: v for k, v in self.__dict__.items() if k in attrs}
+        else:
+            return self.__dict__
