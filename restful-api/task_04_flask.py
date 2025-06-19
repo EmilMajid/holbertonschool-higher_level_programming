@@ -2,7 +2,10 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-users = {}
+# Predefined users for testing consistency
+users = {
+    "john": {"name": "John Doe", "age": 30}
+}
 
 @app.route('/')
 def home():
@@ -25,7 +28,7 @@ def get_user(username):
 
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    global users  # Bu sətri əlavə et
+    global users
     data = request.get_json()
 
     if not isinstance(data, dict) or 'username' not in data:
@@ -44,4 +47,4 @@ def add_user():
     return jsonify({"message": "User added", "user": users[username]}), 201
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
