@@ -2,11 +2,8 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# In-memory user database
-users = {
-    "john": {"name": "John Doe", "age": 30},
-    "jane": {"name": "Jane Smith", "age": 25}
-}
+# Start with an empty user database (as expected by the tests)
+users = {}
 
 @app.route('/')
 def home():
@@ -20,14 +17,14 @@ def home():
 def status():
     """
     Status check endpoint.
-    Returns a simple "OK" message to indicate the server is up.
+    Returns a simple "OK" message to indicate the server is running.
     """
     return "OK"
 
 @app.route('/data')
 def get_users():
     """
-    Returns a list of all usernames in the system.
+    Returns a list of all usernames currently in the system.
     The result is returned as a JSON array.
     """
     return jsonify(list(users.keys()))
@@ -55,15 +52,16 @@ def add_user():
     Adds a new user to the in-memory database.
     
     Expects:
-        JSON data with the keys: "username", "name", and "age"
+        JSON data with the key "username", and optional "name" and "age".
     
     Returns:
         JSON message indicating success with 201 status,
         or error message with 400 status if data is missing or invalid.
     """
     data = request.get_json()
-
-    if not data or 'username' not in data:
+    
+    # Ensure the request body is valid JSON and contains a username
+    if not isinstance(data, dict) or 'username' not in data:
         return jsonify({"error": "Username is required"}), 400
 
     username = data['username']
@@ -80,7 +78,6 @@ def add_user():
 
 if __name__ == '__main__':
     """
-    Starts the Flask development server on localhost:5000
-    with debug mode enabled.
+    Starts the Flask development server on localhost:5000 with debug mode enabled.
     """
     app.run(debug=True)
