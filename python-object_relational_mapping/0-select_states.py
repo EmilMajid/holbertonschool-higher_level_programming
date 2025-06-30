@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 This script connects to a MySQL database and lists all states
-from the 'states' table in the specified database, ordered by id in ascending order.
+from the 'states' table in the specified database, ordered 
+by id in ascending order.
 It takes three command-line arguments: username, password, and database name.
 """
 import MySQLdb
